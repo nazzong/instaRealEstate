@@ -1,0 +1,10 @@
+type Query {
+  getAcceptRecord(currentYear: String!): [AcceptRecrod!]!
+  getAcceptRecordByMonth(currentMonth: String!): [AcceptRecrod!]!
+  getAcceptRecordByDate(currentDate: String!): [AcceptRecrod!]!
+  getAcceptRecrodAllYear(year: String!): [AcceptRecrod!]!
+}
+
+type Mutation {
+  addAcceptRecord(date: String!): Boolean!
+}

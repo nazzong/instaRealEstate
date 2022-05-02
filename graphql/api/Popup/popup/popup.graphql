@@ -1,0 +1,8 @@
+type Query {
+  getPopup: [Popup!]!
+}
+
+type Mutation {
+  modifyPopup(id: String!, imagePath: String!): Boolean!
+  modifyPopupStatus(id: String!, status: Boolean!): Boolean!
+}

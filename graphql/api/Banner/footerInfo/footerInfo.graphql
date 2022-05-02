@@ -1,0 +1,19 @@
+type Query {
+  getFooterInfo: FooterInfo!
+}
+
+type Mutation {
+  modifyFooterInfo(
+    id: String!
+    cheifName: String!
+    businessName: String!
+    businessNumber: String!
+    tel: String!
+    email: String!
+    address: String!
+    privacyOfficer: String!
+    officeHours: String!
+  ): Boolean!
+
+  # modifyFooterInfoLogoPath(id: String!, logoPath: String!): Boolean!
+}

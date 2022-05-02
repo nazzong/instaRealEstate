@@ -1,0 +1,3 @@
+type Query {
+  getHeaderMenus: [MenuDepth_1!]!
+}

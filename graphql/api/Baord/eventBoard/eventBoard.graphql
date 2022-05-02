@@ -1,0 +1,28 @@
+type Query {
+  getEventBoard(limit: Int!, currentPage: Int!): [EventBoard!]!
+  getEventBoardClient(limit: Int!, currentPage: Int!): [EventBoard!]!
+  getEventBoardTotalPage(limit: Int!): Int!
+  getEventBoardTotalPageClient(limit: Int!): Int!
+  getEventBoardDetail(id: String!): EventBoard!
+  getEventBoardNextId(id: String!): EventBoard
+  getEventBoardBeforeId(id: String!): EventBoard
+  getEventBoardList: [EventBoard!]!
+}
+
+type Mutation {
+  createEventBoard(
+    thumbnail: String!
+    title: String!
+    description: String!
+    eventTerm: String!
+  ): Boolean!
+  deleteEventBoard(id: String!): Boolean!
+  modifyEventBoard(id: String!, description: String!): Boolean!
+  modifyEventBoardBasic(
+    id: String!
+    title: String!
+    eventTerm: String!
+    thumbnail: String!
+  ): Boolean!
+  deleteEvent(id: String!): Boolean!
+}

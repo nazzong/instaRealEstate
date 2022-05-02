@@ -1,0 +1,13 @@
+type Query {
+  getMainBanner: [MainBanner!]!
+}
+
+type Mutation {
+  modifyMainBanner(
+    id: String!
+    title: String!
+    content: String!
+    link: String!
+  ): Boolean!
+  modifyMainBannerImagePath(id: String!, imagePath: String!): Boolean!
+}

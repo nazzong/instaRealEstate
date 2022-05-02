@@ -1,0 +1,29 @@
+type Query {
+  getAdminUserLoginResult(userId: String!, password: String!): AdminUser
+  getAdminUser: [AdminUser]!
+  getTotalAdminUser: [AdminUser]!
+  getAdminUserSearch(searchValue: String!): [AdminUser]!
+}
+
+type Mutation {
+  deleteAdminUser(id: String!): Boolean!
+  createAdminUser(
+    userId: String!
+    password: String!
+    rank: String!
+    name: String!
+    mobile: String!
+    address: String!
+    securityNumber: String!
+    filePath: String!
+  ): Boolean!
+  updateAdminUser(
+    id: String!
+    rank: String!
+    name: String!
+    mobile: String!
+    address: String!
+    securityNumber: String!
+    filePath: String!
+  ): Boolean!
+}
