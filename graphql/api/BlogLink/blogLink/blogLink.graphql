@@ -1,7 +1,0 @@
-type Query {
-  getBlogLink: BlogLink
-}
-
-type Mutation {
-  modifyBlogLink(id: String!, link: String!): Boolean!
-}
